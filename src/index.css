@@ -114,9 +114,9 @@ Buttons
 }
 .btn-block {
   width: 100%;
-  display: block;
+  display: block; 
   margin: 0 auto;
-  box-shadow: var(--lightShadow);
+  box-shadow: var(--lightShadow); 
   text-align: center;
 }
 .btn-details {
@@ -151,11 +151,13 @@ Navbar
   display: flex;
   align-items: center;
 }
+
+
 .nav-links a {
   text-transform: capitalize;
   display: inline-block;
   font-weight: bold;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-weight: 500;
   color: var(--mainBackground);
   letter-spacing: 2px;
@@ -163,9 +165,15 @@ Navbar
   padding: 0.25rem 0.5rem;
   transition: var(--mainTransition);
 }
+
 .nav-links a:hover {
   color: var(--mainBlack);
 }
+
+.nav-links a:active {
+  color: var(--mainBlack);
+}
+
 .logo {
   width: 12rem;
 }

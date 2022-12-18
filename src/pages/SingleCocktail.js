@@ -9,12 +9,14 @@ export default function SingleCocktail() {
 
   React.useEffect(() => {
     setLoading(true)
+
     async function getCocktail() {
       try {
         const response = await fetch(
           `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
         )
         const data = await response.json()
+
         if (data.drinks) {
           const {
             strDrink: name,
@@ -29,6 +31,7 @@ export default function SingleCocktail() {
             strIngredient4,
             strIngredient5,
           } = data.drinks[0]
+
           const ingredients = [
             strIngredient1,
             strIngredient2,
@@ -36,6 +39,7 @@ export default function SingleCocktail() {
             strIngredient4,
             strIngredient5,
           ]
+
           const newCocktail = {
             name,
             image,
@@ -46,19 +50,26 @@ export default function SingleCocktail() {
             ingredients,
           }
           setCocktail(newCocktail)
+
         } else {
           setCocktail(null)
         }
+
       } catch (error) {
         console.log(error)
       }
+      
       setLoading(false)
     }
+
     getCocktail()
   }, [id])
+
+
   if (loading) {
-    return <Loading/>
+    return <Loading />
   }
+
   if (!cocktail) {
     return <h2 className='section-title'>no cocktail to display</h2>
   } else {
@@ -70,15 +81,18 @@ export default function SingleCocktail() {
       glass,
       instructions,
       ingredients,
-    } = cocktail
+    } = cocktail;
 
-    
+
     return (
       <section className='section cocktail-section'>
+
         <Link to='/' className='btn btn-primary'>
           back home
         </Link>
+
         <h2 className='section-title'>{name}</h2>
+
         <div className='drink'>
           <img src={image} alt={name}></img>
           <div className='drink-info'>
@@ -105,6 +119,7 @@ export default function SingleCocktail() {
             </p>
           </div>
         </div>
+
       </section>
     )
   }

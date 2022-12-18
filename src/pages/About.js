@@ -5,8 +5,8 @@ export default function About() {
     <section className="section about-section">
       <h1 className="section-title">about us</h1>
       <p>
-        We at cocktailPub provide you with wonderful-looking and more wonderfully-tasting cocktails
-        as provided by Cocktailsdb.com<br></br>Feel free to make your search, get your ingredients and make your cocktail.
+        The CocktailHub presents you a simple-looking site with wonderfully-tasting cocktails (data
+        as provided by Cocktailsdb.com API)<br></br>Feel free to make your search, get your ingredients and make your cocktail.
         That way, all doubts are cleared!  &#128521;
 
 

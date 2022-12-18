@@ -1,6 +1,8 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
+
 export default function SearchForm() {
+
   const { setSearchTerm } = useGlobalContext()
   const searchValue = React.useRef('')
 
@@ -14,6 +16,8 @@ export default function SearchForm() {
   function handleSubmit(e) {
     e.preventDefault()
   }
+
+  
   return (
     <section className='section search'>
       <form className='search-form' onSubmit={handleSubmit}>

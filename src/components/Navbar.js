@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.png'
+
+
 export default function Navbar() {
   return (
     <nav className='navbar'>
@@ -8,6 +10,7 @@ export default function Navbar() {
         <Link to='/'>
           <img src={logo} alt='cocktail db logo' className='logo' />
         </Link>
+
         <ul className='nav-links'>
           <li>
             <Link to='/'>home</Link>
@@ -16,6 +19,7 @@ export default function Navbar() {
             <Link to='/about'>about</Link>
           </li>
         </ul>
+        
       </div>
     </nav>
   )
