@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../logo.png'
+import { Link, NavLink } from 'react-router-dom'
+import logo from "../assets/logo/partyTyme.png"
 
 
 export default function Navbar() {
@@ -8,18 +8,25 @@ export default function Navbar() {
     <nav className='navbar'>
       <div className='nav-center'>
         <Link to='/'>
-          <img src={logo} alt='cocktail db logo' className='logo' />
+          <img src={logo} alt='partytyme logo' className='logo' />
         </Link>
 
         <ul className='nav-links'>
           <li>
-            <Link to='/'>home</Link>
+            <NavLink
+              to='/'
+              exact
+
+            >home</NavLink>
           </li>
           <li>
-            <Link to='/about'>about</Link>
+            <NavLink
+              to='/about'
+              exact
+            >about</NavLink>
           </li>
         </ul>
-        
+
       </div>
     </nav>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../context';
 
 export default function SearchForm() {
 
@@ -13,26 +13,29 @@ export default function SearchForm() {
   function searchCocktail() {
     setSearchTerm(searchValue.current.value)
   }
+
   function handleSubmit(e) {
     e.preventDefault()
   }
 
-  
   return (
     <section className='section search'>
+
       <form className='search-form' onSubmit={handleSubmit}>
         <div className='form-control'>
-          <label htmlFor='name'>Search your favorite cocktail</label>
+          <label htmlFor='name'></label>
           <input
             type='text'
             name='name'
             id='name'
             ref={searchValue}
             onChange={searchCocktail}
+            placeholder='Search your favorite cocktail'
           />
         </div>
-        <p>search by name or letter</p>
+        <p className='search_guide'>search by name or letter</p>
       </form>
+
     </section>
   )
 }

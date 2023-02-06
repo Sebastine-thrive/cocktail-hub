@@ -16,7 +16,7 @@ export default function CocktailList() {
     )
   }
 
-  else if (cocktails.length == 1) {
+  else if (cocktails.length === 1) {
     return (
       <section className='section'>
         <h2 className='section-title'> your cocktail</h2>
